@@ -9,8 +9,8 @@ function LikeButton (props){
     }
 
     return (
-        <div>
-            <p>{count}</p>
+        <div className='likeButtonNum'>
+            <span>{count}</span>
             <button onClick={increment}>Like</button>
         </div>
     )   

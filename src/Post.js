@@ -1,16 +1,19 @@
-import React from 'react';
-
+import React from 'react'
 import LikeButton from './LikeButton'
 
-export default class Post extends React.Component {
-    render() {
+const Post =({name, content,likes,src})=>{
+    
         return (
             <div className='post'>
-                <h3>{this.props.name}</h3>
-                <p>{this.props.content}</p>
+                <div className='likesDiv'>
+                    <img src={src} alt="avatar" />
+                    <h3>{name}</h3>
+                    <p>{content}</p>
+                </div>
                 <p>Number of Likes</p>
-                <LikeButton likes={this.props.likes}/>
+                <LikeButton likes={likes}/>
             </div>
-        )
+            )
     }
-}
+
+export default Post

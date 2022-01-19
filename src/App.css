@@ -1,17 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
 .app {
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  background-color: rgb(228, 228, 228);
+  justify-content: space-around;
+  padding-top: 20px;
+  background-color: #a2d7d5;
 }
-
+.likesDiv{
+  line-height: 0.5em;
+  text-align: center;
+}
+.likeButtonNum{
+  text-align: center;
+}
+.likeButtonNum span{ 
+  margin-right: 10px;
+}
 .post {
-  border: 1px solid black;
-  height: 300px;
+  font-family: 'dongle',sans-serif;
+  font-weight: 500;
+  font-size: larger;
+  border: 1px solid #55a3ab;
+  height:250px;
   width: 200px;
   background-color: white;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+img{
+  height:30px;
 }

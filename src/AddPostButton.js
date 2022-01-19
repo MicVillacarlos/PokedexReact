@@ -1,11 +1,11 @@
 import React from "react"
 
-export default class AddPostButton extends React.Component {
-    render() {
+const AddPostButton =({onClick}) => {
         return (
             <div>
-                <button onClick={this.props.addPostHandler}>Add Post</button>
+                <button onClick={onClick}>Add Post</button>
             </div>
         )
     }
-}
+
+export default AddPostButton;
