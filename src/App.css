@@ -3,10 +3,30 @@
 .app {
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding-top: 20px;
+  padding:30px;
   background-color: #a2d7d5;
 }
+.headerImageDiv{
+  display: flex;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./background.jpeg);
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+
+}
+.headerImage{
+  min-width: 450px;
+} 
+
 .likesDiv{
   line-height: 0.5em;
   text-align: center;
@@ -23,9 +43,9 @@
   font-size: larger;
   border: 1px solid #55a3ab;
   height:250px;
-  width: 200px;
-  background-color: white;
-  border-radius: 10px;
+  width:200px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,4 +54,47 @@
 }
 img{
   height:30px;
+}
+.form{
+  font-family: 'dongle',sans-serif;
+  font-weight: 500;
+  font-size: larger;
+  border: 1px solid #55a3ab;
+  height:250px;
+  width: 200px;
+  background-color: rgb(245, 250, 202);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.h4{
+  margin-bottom: -3px;
+}
+.formBtn{
+  margin-top:10px;
+  background-color: palevioletred;
+  color: white;
+  border-radius: 50px;
+  border: wheat;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 0.5em;
+}
+button:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+::placeholder{
+  font-family: 'dongle',sans-serif;
+  text-align: center
+}
+.headerImage{
+  width: 400px;
+  height: auto;
 }
