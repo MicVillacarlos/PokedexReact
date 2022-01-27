@@ -26,11 +26,12 @@ const formValidation = () => {
 }
 
 const onSubmit = (e) => {
+    let id = Math.floor(Math.random()*100)
     e.preventDefault();
     setName('')
     setComment('')
     if(formValidation()){
-        onAdd({name,content,src:'./AvatarImages/pokeball.png',likes:0});
+        onAdd({id:id,name,content,src:'./AvatarImages/pokeball.png',likes:0});
     }
 }
 

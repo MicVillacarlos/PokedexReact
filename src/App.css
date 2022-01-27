@@ -8,11 +8,25 @@
   padding:30px;
   background-color: #a2d7d5;
 }
+.showHidden{
+  background-color: #a2d7d5;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.showHiddenBtn{
+  font-family: 'dongle',sans-serif;
+  font-size: medium;
+  border: transparent;
+  border-radius: 50px;
+  background-color: white;
+}
+.showHiddenBtn:hover{
+  cursor: pointer;
+  color: #a2d7d5;
+}
 .headerImageDiv{
   display: flex;
-  left: 0;
-  right: 0;
-  z-index: 1;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -21,7 +35,6 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position-y: bottom;
-
 }
 .headerImage{
   min-width: 450px;
@@ -51,6 +64,17 @@
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.hideBtn{
+  align-self: flex-start;
+  margin-left: 10px;
+  opacity: 40%;
+  height: 10px;
+  cursor: pointer;
+}
+.hideBtn :hover{
+  cursor: pointer;
+  color: #55a3ab;
 }
 img{
   height:30px;
