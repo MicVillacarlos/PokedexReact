@@ -8,28 +8,22 @@
   padding:30px;
   background-color: #a2d7d5;
 }
-.showHiddenHide{
+.showHidden{
   background-color: #a2d7d5;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
 }
-.showHiddenHideBtn{
+
+.showHiddenBtn{
   font-family: 'dongle',sans-serif;
   font-size: medium;
   border: transparent;
   border-radius: 50px;
   background-color: white;
 }
-.showHiddenHideBtn :hover{
+.showHiddenBtn:hover{
   cursor: pointer;
   color: #a2d7d5;
-}
-.showLastHiddenBtn{
-  font-family: 'dongle',sans-serif;
-  font-size: medium;
-  border: transparent;
-  border-radius: 50px;
-  background-color: rgb(218, 241, 132);
 }
 .headerImageDiv{
   display: flex;

@@ -26,7 +26,7 @@ const formValidation = () => {
 }
 
 const onSubmit = (e) => {
-    let id = Math.floor(Math.random()*10000)
+    let id = Math.floor(Math.random()*100)
     e.preventDefault();
     setName('')
     setComment('')

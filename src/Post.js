@@ -4,8 +4,6 @@ import { BiHide } from "react-icons/bi"
 
 const Post =({name, content,likes,src,onClick})=>{
 
-    
-    
     return (
     <div className='post' data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="800" >
     <div className='hideBtn' onClick={onClick}><BiHide/></div>
