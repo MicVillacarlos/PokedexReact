@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
 
+*{
+  font-family: 'dongle',sans-serif;
+  text-decoration: none;
+}
+a{
+  color: white
+}
+a:hover{
+  font-weight: bold;
+}
+.navbar{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: #116461;
+  font-size:20px;
+}
 .app {
   min-height: 100vh;
   display: flex;
@@ -27,7 +44,7 @@
 }
 .headerImageDiv{
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   justify-content: center;
   align-items: center;
   background-image: url(./background.jpeg);
@@ -58,6 +75,21 @@
   height:250px;
   width:200px;
   background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.postHidden{
+  font-family: 'dongle',sans-serif;
+  font-weight: 500;
+  font-size: larger;
+  border: 1px solid #55a3ab;
+  height:250px;
+  width:200px;
+  background-color: rgba(255, 255, 255, 0.411);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -105,7 +137,8 @@ img{
   border: wheat;
   cursor: pointer;
   padding: 8px;
-  font-size: 0.5em;
+  font-size: 0.8em;
+
 }
 button:active {
   background: #e5e5e5;

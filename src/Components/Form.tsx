@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Form = ({onAdd}) => {
+const Form = ({onAdd}:{onAdd:any}) => {
 const[name, setName] = useState('');
 const[content, setComment] = useState('');
 const[errors, setError] = useState(' ');
@@ -11,7 +11,7 @@ const formValidation = () => {
     if (name.includes('@')){
         errors="do not put '@'" 
     }
-    if (content.includes('@','!')){
+    if (content.includes('@')){
         errors="do not put '@'"
     }
     if(name.includes('!')){
@@ -25,7 +25,7 @@ const formValidation = () => {
     return true
 }
 
-const onSubmit = (e) => {
+const onSubmit = (e:any) => {
     let id = Math.floor(Math.random()*100)
     e.preventDefault();
     setName('')
@@ -45,7 +45,7 @@ const onSubmit = (e) => {
                 <input name='name' onChange={(event)=>setName(event.target.value)} type="text" value={name} placeholder='Nickname or First Name' required />
 
                 <label>Comment</label>
-                <textarea name="content" id='1' cols="20" onChange={(event)=>setComment(event.target.value)} rows="3"  value={content} placeholder='Add Comment Here' required></textarea>
+                <textarea name="content" id='1' onChange={(event)=>setComment(event.target.value)}value={content} placeholder='Add Comment Here' required></textarea>
                 <div style={{ color:'red'}}>{errors}</div>
 
                 <button className='formBtn'> Spawn</button>

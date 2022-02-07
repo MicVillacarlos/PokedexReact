@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function LikeButton (props){
+function LikeButton (props:any){
     const { likes } = props;
     const [count, setCount] = useState(likes);
 
