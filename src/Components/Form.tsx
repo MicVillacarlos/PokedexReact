@@ -1,37 +1,41 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { useState } from 'react';
 
-const Form = ({onAdd}:{onAdd:any}) => {
-const[name, setName] = useState('');
-const[content, setComment] = useState('');
-const[errors, setError] = useState(' ');
-
-const formValidation = () => {
-    let errors = '';
-    if (name.includes('@')){
-        errors="do not put '@'" 
-    }
-    if (content.includes('@')){
-        errors="do not put '@'"
-    }
-    if(name.includes('!')){
-        errors = "do not put '!' on name"
-    }
-    if (errors){
-        setError(errors)
-        return false
-    }
-    setError(errors = '')
-    return true
+type formProps={
+    onAdd:Function
 }
 
-const onSubmit = (e:any) => {
+const Form = (props:formProps) => {
+    const[name, setName] = useState('');
+    const[content, setComment] = useState('');
+    const[errors, setError] = useState(' ');
+
+    const formValidation = () => {
+        let errors = '';
+        if (name.includes('@')){
+            errors="do not put '@'" 
+        }
+        if (content.includes('@')){
+            errors="do not put '@'"
+        }
+        if(name.includes('!')){
+            errors = "do not put '!' on name"
+        }
+        if (errors){
+            setError(errors)
+            return false
+        }
+        setError(errors = '')
+        return true
+    }
+
+const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     let id = Math.floor(Math.random()*100)
     e.preventDefault();
     setName('')
     setComment('')
     if(formValidation()){
-        onAdd({id:id,name,content,src:'./AvatarImages/pokeball.png',likes:0});
+        props.onAdd({id:id,name,content,src:'./AvatarImages/pokeball.png',likes:0});
     }
 }
 

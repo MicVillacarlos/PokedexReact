@@ -15,12 +15,28 @@ function App (){
     {src:'./AvatarImages/snorlax.png',name: "Reyner", content:"Pagod na ako!", likes:0,id:4},
   ])
 
-  const addPost = (post:any) =>{
+  type addPostType = {
+    post: object;
+    src: string;
+    name: string;
+    content: string;
+    likes: number;
+    id: number;
+  }
+  const addPost = (post:addPostType) =>{
     const newPost = {...post}
       setPosts([...posts,newPost])
   } 
 
-  const hidePost =(post:any)=>{
+  type hidePostType={
+    id: number;
+    src: string;
+    name: string;
+    content: string;
+    likes: number;
+  }
+
+  const hidePost =(post:hidePostType)=>{
     const updatedPosts = posts.filter(item => item.id !== post.id)
     setPosts(updatedPosts)
     setHiddenPosts([...hiddenPosts,post])
