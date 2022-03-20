@@ -9,10 +9,10 @@ import Navbar from './Components/Navbar';
 function App (){
   const[hiddenPosts,setHiddenPosts] = useState([] as any)
   const [posts, setPosts] = useState([
-    {src:'./AvatarImages/pikachu.png',name: "Gian", content:"Gwapa kay ka", likes:2,id:1},
-    {src:'./AvatarImages/bullbasaur.png',name: "Shad", content:"Pogi ko", likes:0,id:2},
-    {src:'./AvatarImages/charmander.png',name: "Carlos", content:"Hanging around", likes:0,id:3},
-    {src:'./AvatarImages/snorlax.png',name: "Reyner", content:"Pagod na ako!", likes:0,id:4},
+    {src: process.env.PUBLIC_URL + '/AvatarImages/pikachu.png',name: "Gian", content:"Gwapa kay ka", likes:2,id:1},
+    {src:process.env.PUBLIC_URL + '/AvatarImages/bullbasaur.png',name: "Shad", content:"Pogi ko", likes:0,id:2},
+    {src:process.env.PUBLIC_URL + '/AvatarImages/charmander.png',name: "Carlos", content:"Hanging around", likes:0,id:3},
+    {src:process.env.PUBLIC_URL + '/AvatarImages/snorlax.png',name: "Reyner", content:"Pagod na ako!", likes:0,id:4},
   ])
 
   type addPostType = {
@@ -52,7 +52,7 @@ function App (){
     <Router>
       <div>
         <div className='headerImageDiv'>
-          <img className='headerImage' data-aos="flip-left" data-aos-duration="2000" src='./AvatarImages/pokemon.png' alt="pokemon logo" />
+          <img className='headerImage' data-aos="flip-left" data-aos-duration="2000" src={process.env.PUBLIC_URL + '/AvatarImages/pokemon.png'} alt="pokemon logo" />
           <Form onAdd={addPost}/>
         </div>
       </div>
