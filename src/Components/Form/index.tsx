@@ -1,11 +1,13 @@
 import React, { FormEvent } from 'react';
 import { useState } from 'react';
+import { FormAdd, Container} from './style'
+import  PokemonLogo  from '../../Assets/pokemon.png'
 
 type formProps={
     onAdd:Function
 }
 
-const Form = (props:formProps) => {
+export const Form = (props:formProps) => {
     const[name, setName] = useState('');
     const[content, setComment] = useState('');
     const[errors, setError] = useState(' ');
@@ -40,22 +42,22 @@ const onSubmit = (e: FormEvent<HTMLFormElement>) => {
 }
 
     return(
-        <div data-aos="fade-up" data-aos-duration="2000">
-            <form className='form' onSubmit={onSubmit}>
-
+        <Container>
+            <img src={PokemonLogo} alt="skourse-pokemon-logo" />
+            <FormAdd onSubmit={onSubmit} data-aos="fade-up" data-aos-duration="2000">
                 <h4 className='h4'>Add Pokemon here!</h4>
-
                 <label>Name</label>
-                <input name='name' onChange={(event)=>setName(event.target.value)} type="text" value={name} placeholder='Nickname or First Name' required />
-
+                    <input name='name' onChange={(event)=>setName(event.target.value)} type="text" value={name} placeholder='Nickname or First Name' required />
                 <label>Comment</label>
-                <textarea name="content" id='1' onChange={(event)=>setComment(event.target.value)}value={content} placeholder='Add Comment Here' required></textarea>
-                <div style={{ color:'red'}}>{errors}</div>
-
-                <button className='formBtn'> Spawn</button>
-            </form>
-        </div>
+                    <textarea name="content" id='1' onChange={(event)=>setComment(event.target.value)}value={content} placeholder='Add Comment Here' required></textarea>
+                <div style={{ color:'red'}}>
+                    {errors}
+                </div>
+                <button className='formBtn'> 
+                    Spawn
+                </button>
+            </FormAdd>
+        </Container>
     )
 }
 
-export default Form

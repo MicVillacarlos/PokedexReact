@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Post from './Components/Post';
 import './App.css';
-import Form from './Components/Form';
+import { Form } from './Components/Form'
 import HiddenList from './Components/HiddenList';
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 import Navbar from './Components/Navbar';
@@ -51,10 +51,10 @@ function App (){
   return (
     <Router>
       <div>
-        <div className='headerImageDiv'>
-          <img className='headerImage' data-aos="flip-left" data-aos-duration="2000" src={process.env.PUBLIC_URL + '/AvatarImages/pokemon.png'} alt="pokemon logo" />
+        {/* <div className='headerImageDiv'>
+          <img className='headerImage' data-aos="flip-left" data-aos-duration="2000" src={process.env.PUBLIC_URL + '/AvatarImages/pokemon.png'} alt="pokemon logo" /> */}
           <Form onAdd={addPost}/>
-        </div>
+        {/* </div> */}
       </div>
       <Navbar />
       <Switch>
